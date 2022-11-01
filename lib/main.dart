@@ -5,10 +5,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 late SharedPreferences prefs;
 void main() async {
-  // main() 함수에서 async를 쓰려면 필요
   WidgetsFlutterBinding.ensureInitialized();
-
-  // shared_preferences 인스턴스 생성
   prefs = await SharedPreferences.getInstance();
 
   runApp(MyApp());

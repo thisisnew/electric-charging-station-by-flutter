@@ -5,19 +5,45 @@ class AuthPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.white,
-        title: Text(
-          "Login",
-          style: TextStyle(color: Colors.black),
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text(
+            'Hello Flutter',
+            style: TextStyle(fontSize: 28),
+          ),
+          centerTitle: true,
         ),
-      ),
-      body: Center(
-        child: Text(
-          "환영합니다!",
-          style: TextStyle(
-            fontSize: 24,
+        body: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Column(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(32.0),
+                  child: Image.network(
+                    "https://i.ibb.co/CwzHq4z/trans-logo-512.png",
+                    width: 81,
+                  ),
+                ),
+                TextField(
+                  decoration: InputDecoration(labelText: '이메일'),
+                ),
+                TextField(
+                  obscureText: true,
+                  decoration: InputDecoration(labelText: '비밀번호'),
+                ),
+                Container(
+                  width: double.infinity,
+                  margin: const EdgeInsets.only(top: 16),
+                  child: ElevatedButton(
+                    onPressed: () {},
+                    child: Text('로그인'),
+                  ),
+                )
+              ],
+            ),
           ),
         ),
       ),
