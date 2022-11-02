@@ -1,4 +1,5 @@
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:electric_charging_station/user.dart';
 import 'package:flutter/material.dart';
 
 final dummyItems = [
@@ -17,7 +18,7 @@ class _LocationPageState extends State<LocationPage> {
   var _pages = [
     Page1(),
     Page2(),
-    Page3(),
+    UserPage(),
   ];
 
   @override
@@ -236,18 +237,6 @@ class Page2 extends StatelessWidget {
     return Center(
       child: Text(
         '이용서비스',
-        style: TextStyle(fontSize: 40),
-      ),
-    );
-  }
-}
-
-class Page3 extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Text(
-        '내 정보',
         style: TextStyle(fontSize: 40),
       ),
     );
