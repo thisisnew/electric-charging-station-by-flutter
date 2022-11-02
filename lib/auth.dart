@@ -1,3 +1,4 @@
+import 'package:electric_charging_station/location.dart';
 import 'package:flutter/material.dart';
 
 class AuthPage extends StatelessWidget {
@@ -38,7 +39,16 @@ class AuthPage extends StatelessWidget {
                   width: double.infinity,
                   margin: const EdgeInsets.only(top: 16),
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      // 로그인 처리
+                      // redirect
+
+                      // Done 클릭시 페이지 이동
+                      Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(builder: (context) => LocationPage()),
+                      );
+                    },
                     child: Text('로그인'),
                   ),
                 )
