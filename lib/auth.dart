@@ -42,7 +42,6 @@ class AuthPage extends StatelessWidget {
                     onPressed: () {
                       // 로그인 처리
                       // redirect
-
                       // Done 클릭시 페이지 이동
                       Navigator.pushReplacement(
                         context,
